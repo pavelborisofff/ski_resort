@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link type="image/png" rel="shortcut icon" href="../static/img/favicon.png"/>
+    <title>Document</title>
+</head>
+<body onload="document.getElementById('focusmeplease').focus();">
+    <header class="header nav navbar-light bg-light">
+        <div class="header__container container">
+            <h1 class="header__heading visually-hidden d-none"></h1>
+            <div class="row align-items-center text-uppercase">
+                <a href="#" class="header__link col-2">
+                    <img src="../static/img/logo.png" class="header__logo img-fluid" alt="logo">
+                </a>
+                <nav class="header__nav col-9 offset-1">
+                    <ul class="navbar nav">
+                        <li class="nav__item nav-item"><a href="#" class="nav__link nav-link disabled">Погода</a></li>
+                        <li class="nav__item nav-item"><a href="./lifts.html" class="nav__link nav-link">Подъёмники</a></li>
+                        <li class="nav__item nav-item"><a href="./slopes.html" class="nav__link nav-link active">Трассы</a></li>
+                        <li class="nav__item nav-item"><a href="./activities.html" class="nav__link nav-link">Активности</a></li>
+                        <li class="nav__item nav-item"><a href="#" class="nav__link nav-link disabled">Пользователи</a></li>
+                        <li class="nav__item nav-item"><a href="#" class="nav__link nav-link disabled">Выйти</a></li>
+                    </ul>
+                </nav>
+                <!-- <div class="header__logout col">
+                    <a href="#" class="nav__link nav-link">Выйти</a>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <div class="table__container container bg-light mt-4 pb-1">
+        <div class="row text-uppercase pt-3 justify-content-between">
+            <span class="h4 ml-2 col">Трассы</span>
+            <div class="btn-group col-2">
+                <button type="button" class="btn btn-sm btn-danger">Отменить</button>
+                <button type="button" class="btn btn-sm btn-success">Сохранить</button>
+            </div>
+        </div>
+        <table class=" table table-striped table-hover table-striped mt-3 text-center">
+            <!-- <caption>Трассы</caption> -->
+            <thead>
+                <tr>
+                    <th scope="col">Название</th>
+                    <th scope="col">Сложность</th>
+                    <th scope="col">Время работы</th>
+                    <th scope="col">Состояние</th>
+                    <th scope="col">Последнее изменение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">АДОНИС</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_0" id="gridRadios1_0" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_0" id="gridRadios2_0" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_0" id="gridRadios3_0" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_0" id="gridRadios4_0" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_0" id="state_O_0" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_0" id="state_P_0" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_0" id="state_C_0" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_0" id="state_OO_0" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">АЗАЛИЯ ВЫШЕ 1535</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_1" id="gridRadios1_1" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_1" id="gridRadios2_1" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_1" id="gridRadios3_1" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_1" id="gridRadios4_1" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_1" id="state_O_1" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_1" id="state_P_1" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_1" id="state_C_1" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_1" id="state_OO_1" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">АЗАЛИЯ НИЖЕ 1535</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_2" id="gridRadios1_2" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_2" id="gridRadios2_2" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_2" id="gridRadios3_2" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_2" id="gridRadios4_2" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_2" id="state_O_2" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_2" id="state_P_2" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_2" id="state_C_2" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_2" id="state_OO_2" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">АИБГА</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_3" id="gridRadios1_3" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_3" id="gridRadios2_3" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_3" id="gridRadios3_3" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_3" id="gridRadios4_3" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_3" id="state_O_3" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_3" id="state_P_3" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_3" id="state_C_3" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_3" id="state_OO_3" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">АЛЬПИКА</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_4" id="gridRadios1_4" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_4" id="gridRadios2_4" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_4" id="gridRadios3_4" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_4" id="gridRadios4_4" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_4" id="state_O_4" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_4" id="state_P_4" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_4" id="state_C_4" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_4" id="state_OO_4" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">АРБОР</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_5" id="gridRadios1_5" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_5" id="gridRadios2_5" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_5" id="gridRadios3_5" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_5" id="gridRadios4_5" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_5" id="state_O_5" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_5" id="state_P_5" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_5" id="state_C_5" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_5" id="state_OO_5" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">Б 52 ВЫШЕ 1350</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_6" id="gridRadios1_6" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_6" id="gridRadios2_6" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_6" id="gridRadios3_6" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_6" id="gridRadios4_6" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_6" id="state_O_6" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_6" id="state_P_6" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_6" id="state_C_6" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_6" id="state_OO_6" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">Б 52 НИЖЕ 1350</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_7" id="gridRadios1_7" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_7" id="gridRadios2_7" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_7" id="gridRadios3_7" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_7" id="gridRadios4_7" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_7" id="state_O_7" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_7" id="state_P_7" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_7" id="state_C_7" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_7" id="state_OO_7" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">БОРЕЙ ВЫШЕ 1295</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_8" id="gridRadios1_8" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_8" id="gridRadios2_8" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_8" id="gridRadios3_8" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_8" id="gridRadios4_8" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_8" id="state_O_8" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_8" id="state_P_8" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_8" id="state_C_8" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_8" id="state_OO_8" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">БОРЕЙ НИЖЕ 1295</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_9" id="gridRadios1_9" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_9" id="gridRadios2_9" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_9" id="gridRadios3_9" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_9" id="gridRadios4_9" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_9" id="state_O_9" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_9" id="state_P_9" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_9" id="state_C_9" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_9" id="state_OO_9" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">БУМЕРАНГ</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_10" id="gridRadios1_10" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_10" id="gridRadios2_10" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_10" id="gridRadios3_10" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_10" id="gridRadios4_10" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_10" id="state_O_10" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_10" id="state_P_10" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_10" id="state_C_10" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_10" id="state_OO_10" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ВАНКУВЕР 10</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_11" id="gridRadios1_11" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_11" id="gridRadios2_11" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_11" id="gridRadios3_11" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_11" id="gridRadios4_11" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_11" id="state_O_11" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_11" id="state_P_11" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_11" id="state_C_11" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_11" id="state_OO_11" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ВЕРОНИКА</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_12" id="gridRadios1_12" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_12" id="gridRadios2_12" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_12" id="gridRadios3_12" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_12" id="gridRadios4_12" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_12" id="state_O_12" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_12" id="state_P_12" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_12" id="state_C_12" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_12" id="state_OO_12" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ВИРАЖ ВЫШЕ 1800</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_13" id="gridRadios1_13" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_13" id="gridRadios2_13" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_13" id="gridRadios3_13" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_13" id="gridRadios4_13" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_13" id="state_O_13" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_13" id="state_P_13" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_13" id="state_C_13" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_13" id="state_OO_13" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ВИРАЖ НИЖЕ 1800</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_14" id="gridRadios1_14" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_14" id="gridRadios2_14" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_14" id="gridRadios3_14" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_14" id="gridRadios4_14" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_14" id="state_O_14" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_14" id="state_P_14" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_14" id="state_C_14" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_14" id="state_OO_14" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ВСТРЕЧА</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_15" id="gridRadios1_15" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_15" id="gridRadios2_15" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_15" id="gridRadios3_15" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_15" id="gridRadios4_15" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_15" id="state_O_15" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_15" id="state_P_15" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_15" id="state_C_15" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_15" id="state_OO_15" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ГОРИЗОНТ ВЫШЕ 1600</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_16" id="gridRadios1_16" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_16" id="gridRadios2_16" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_16" id="gridRadios3_16" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_16" id="gridRadios4_16" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_16" id="state_O_16" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_16" id="state_P_16" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_16" id="state_C_16" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_16" id="state_OO_16" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ГОРИЗОНТ НИЖЕ 1600</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_17" id="gridRadios1_17" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_17" id="gridRadios2_17" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_17" id="gridRadios3_17" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_17" id="gridRadios4_17" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_17" id="state_O_17" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_17" id="state_P_17" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_17" id="state_C_17" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_17" id="state_OO_17" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ГОРИЦВЕТ</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_18" id="gridRadios1_18" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_18" id="gridRadios2_18" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_18" id="gridRadios3_18" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_18" id="gridRadios4_18" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_18" id="state_O_18" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_18" id="state_P_18" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_18" id="state_C_18" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_18" id="state_OO_18" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ДЕТСКИЙ СКЛОН</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_19" id="gridRadios1_19" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_19" id="gridRadios2_19" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_19" id="gridRadios3_19" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_19" id="gridRadios4_19" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_19" id="state_O_19" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_19" id="state_P_19" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_19" id="state_C_19" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_19" id="state_OO_19" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЖЕНСКИЙ ОЛИМПИЙСКИЙ СПУСК ВЫШЕ 1600</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_20" id="gridRadios1_20" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_20" id="gridRadios2_20" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_20" id="gridRadios3_20" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_20" id="gridRadios4_20" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_20" id="state_O_20" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_20" id="state_P_20" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_20" id="state_C_20" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_20" id="state_OO_20" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЖЕНСКИЙ ОЛИМПИЙСКИЙ СПУСК НИЖЕ 1600</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_21" id="gridRadios1_21" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_21" id="gridRadios2_21" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_21" id="gridRadios3_21" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_21" id="gridRadios4_21" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_21" id="state_O_21" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_21" id="state_P_21" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_21" id="state_C_21" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_21" id="state_OO_21" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЗМЕЙКА ВЫШЕ 1665</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_22" id="gridRadios1_22" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_22" id="gridRadios2_22" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_22" id="gridRadios3_22" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_22" id="gridRadios4_22" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_22" id="state_O_22" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_22" id="state_P_22" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_22" id="state_C_22" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_22" id="state_OO_22" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЗМЕЙКА НИЖЕ 1665</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_23" id="gridRadios1_23" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_23" id="gridRadios2_23" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_23" id="gridRadios3_23" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_23" id="gridRadios4_23" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_23" id="state_O_23" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_23" id="state_P_23" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_23" id="state_C_23" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_23" id="state_OO_23" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">КАСКАД ВЫШЕ 1600</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_24" id="gridRadios1_24" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_24" id="gridRadios2_24" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_24" id="gridRadios3_24" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_24" id="gridRadios4_24" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_24" id="state_O_24" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_24" id="state_P_24" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_24" id="state_C_24" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_24" id="state_OO_24" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">КАСКАД НИЖЕ 1600</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_25" id="gridRadios1_25" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_25" id="gridRadios2_25" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_25" id="gridRadios3_25" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_25" id="gridRadios4_25" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_25" id="state_O_25" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_25" id="state_P_25" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_25" id="state_C_25" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_25" id="state_OO_25" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">КВАРТЕТ</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_26" id="gridRadios1_26" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_26" id="gridRadios2_26" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_26" id="gridRadios3_26" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_26" id="gridRadios4_26" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_26" id="state_O_26" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_26" id="state_P_26" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_26" id="state_C_26" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_26" id="state_OO_26" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">КРЭЙЗИ ХУТОР ВЫШЕ 1400</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_27" id="gridRadios1_27" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_27" id="gridRadios2_27" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_27" id="gridRadios3_27" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_27" id="gridRadios4_27" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_27" id="state_O_27" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_27" id="state_P_27" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_27" id="state_C_27" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_27" id="state_OO_27" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">КРЭЙЗИ ХУТОР НИЖЕ 1400</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_28" id="gridRadios1_28" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_28" id="gridRadios2_28" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_28" id="gridRadios3_28" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_28" id="gridRadios4_28" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_28" id="state_O_28" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_28" id="state_P_28" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_28" id="state_C_28" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_28" id="state_OO_28" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЛАБИРИНТ ВЫШЕ 1400</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_29" id="gridRadios1_29" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_29" id="gridRadios2_29" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_29" id="gridRadios3_29" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_29" id="gridRadios4_29" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_29" id="state_O_29" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_29" id="state_P_29" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_29" id="state_C_29" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_29" id="state_OO_29" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЛАБИРИНТ НИЖЕ 1400</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_30" id="gridRadios1_30" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_30" id="gridRadios2_30" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_30" id="gridRadios3_30" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_30" id="gridRadios4_30" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_30" id="state_O_30" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_30" id="state_P_30" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_30" id="state_C_30" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_30" id="state_OO_30" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">МУЖСКОЙ ОЛИМПИЙСКИЙ СПУСК ВЫШЕ 1600</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_31" id="gridRadios1_31" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_31" id="gridRadios2_31" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_31" id="gridRadios3_31" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_31" id="gridRadios4_31" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_31" id="state_O_31" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_31" id="state_P_31" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_31" id="state_C_31" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_31" id="state_OO_31" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">МУЖСКОЙ ОЛИМПИЙСКИЙ СПУСК НИЖЕ 1600</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_32" id="gridRadios1_32" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_32" id="gridRadios2_32" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_32" id="gridRadios3_32" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_32" id="gridRadios4_32" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_32" id="state_O_32" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_32" id="state_P_32" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_32" id="state_C_32" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_32" id="state_OO_32" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">НАГАНО 98</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_33" id="gridRadios1_33" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_33" id="gridRadios2_33" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_33" id="gridRadios3_33" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_33" id="gridRadios4_33" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_33" id="state_O_33" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_33" id="state_P_33" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_33" id="state_C_33" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_33" id="state_OO_33" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">НАЯДА</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_34" id="gridRadios1_34" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_34" id="gridRadios2_34" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_34" id="gridRadios3_34" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_34" id="gridRadios4_34" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_34" id="state_O_34" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_34" id="state_P_34" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_34" id="state_C_34" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_34" id="state_OO_34" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ОБЕР ХУТОР ВЫШЕ 1600</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_35" id="gridRadios1_35" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_35" id="gridRadios2_35" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_35" id="gridRadios3_35" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_35" id="gridRadios4_35" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_35" id="state_O_35" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_35" id="state_P_35" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_35" id="state_C_35" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_35" id="state_OO_35" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ОБЕР ХУТОР НИЖЕ 1600</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_36" id="gridRadios1_36" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_36" id="gridRadios2_36" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_36" id="gridRadios3_36" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_36" id="gridRadios4_36" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_36" id="state_O_36" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_36" id="state_P_36" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_36" id="state_C_36" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_36" id="state_OO_36" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ОЗЕРНАЯ</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_37" id="gridRadios1_37" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_37" id="gridRadios2_37" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_37" id="gridRadios3_37" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_37" id="gridRadios4_37" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_37" id="state_O_37" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_37" id="state_P_37" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_37" id="state_C_37" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_37" id="state_OO_37" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ОРЕАДА</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_38" id="gridRadios1_38" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_38" id="gridRadios2_38" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_38" id="gridRadios3_38" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_38" id="gridRadios4_38" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_38" id="state_O_38" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_38" id="state_P_38" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_38" id="state_C_38" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_38" id="state_OO_38" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ОРЕЛ</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_39" id="gridRadios1_39" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_39" id="gridRadios2_39" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_39" id="gridRadios3_39" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_39" id="gridRadios4_39" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_39" id="state_O_39" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_39" id="state_P_39" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_39" id="state_C_39" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_39" id="state_OO_39" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ПАНОРАМА</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_40" id="gridRadios1_40" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_40" id="gridRadios2_40" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_40" id="gridRadios3_40" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_40" id="gridRadios4_40" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_40" id="state_O_40" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_40" id="state_P_40" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_40" id="state_C_40" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_40" id="state_OO_40" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ПАРК THE STASH</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_41" id="gridRadios1_41" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_41" id="gridRadios2_41" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_41" id="gridRadios3_41" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_41" id="gridRadios4_41" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_41" id="state_O_41" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_41" id="state_P_41" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_41" id="state_C_41" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_41" id="state_OO_41" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ПЛАТО</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_42" id="gridRadios1_42" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_42" id="gridRadios2_42" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_42" id="gridRadios3_42" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_42" id="gridRadios4_42" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_42" id="state_O_42" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_42" id="state_P_42" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_42" id="state_C_42" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_42" id="state_OO_42" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ПРИМАВЕРА</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_43" id="gridRadios1_43" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_43" id="gridRadios2_43" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_43" id="gridRadios3_43" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_43" id="gridRadios4_43" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_43" id="state_O_43" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_43" id="state_P_43" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_43" id="state_C_43" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_43" id="state_OO_43" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ПРИМУЛА ВЫШЕ 1940</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_44" id="gridRadios1_44" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_44" id="gridRadios2_44" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_44" id="gridRadios3_44" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_44" id="gridRadios4_44" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_44" id="state_O_44" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_44" id="state_P_44" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_44" id="state_C_44" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_44" id="state_OO_44" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ПРИМУЛА НИЖЕ 1940</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_45" id="gridRadios1_45" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_45" id="gridRadios2_45" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_45" id="gridRadios3_45" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_45" id="gridRadios4_45" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_45" id="state_O_45" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_45" id="state_P_45" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_45" id="state_C_45" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_45" id="state_OO_45" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">РОЗА БЛЕЙД</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_46" id="gridRadios1_46" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_46" id="gridRadios2_46" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_46" id="gridRadios3_46" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_46" id="gridRadios4_46" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_46" id="state_O_46" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_46" id="state_P_46" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_46" id="state_C_46" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_46" id="state_OO_46" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">РОЗА СТАР</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_47" id="gridRadios1_47" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_47" id="gridRadios2_47" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_47" id="gridRadios3_47" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_47" id="gridRadios4_47" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_47" id="state_O_47" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_47" id="state_P_47" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_47" id="state_C_47" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_47" id="state_OO_47" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">СНОУПАРК</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_48" id="gridRadios1_48" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_48" id="gridRadios2_48" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_48" id="gridRadios3_48" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_48" id="gridRadios4_48" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_48" id="state_O_48" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_48" id="state_P_48" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_48" id="state_C_48" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_48" id="state_OO_48" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">СНОУПАРК НА РОЗА 1600</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_49" id="gridRadios1_49" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_49" id="gridRadios2_49" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_49" id="gridRadios3_49" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_49" id="gridRadios4_49" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_49" id="state_O_49" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_49" id="state_P_49" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_49" id="state_C_49" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_49" id="state_OO_49" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">СТОРОЖКА</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_50" id="gridRadios1_50" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_50" id="gridRadios2_50" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_50" id="gridRadios3_50" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_50" id="gridRadios4_50" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_50" id="state_O_50" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_50" id="state_P_50" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_50" id="state_C_50" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_50" id="state_OO_50" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ТРИТОН ВЫШЕ 2000</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_51" id="gridRadios1_51" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_51" id="gridRadios2_51" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_51" id="gridRadios3_51" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_51" id="gridRadios4_51" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_51" id="state_O_51" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_51" id="state_P_51" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_51" id="state_C_51" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_51" id="state_OO_51" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ТРИТОН МЕЖДУ 1600 И 2000</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_52" id="gridRadios1_52" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_52" id="gridRadios2_52" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_52" id="gridRadios3_52" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_52" id="gridRadios4_52" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_52" id="state_O_52" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_52" id="state_P_52" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_52" id="state_C_52" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_52" id="state_OO_52" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ТРИТОН НИЖЕ 1600</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_53" id="gridRadios1_53" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_53" id="gridRadios2_53" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_53" id="gridRadios3_53" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_53" id="gridRadios4_53" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_53" id="state_O_53" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_53" id="state_P_53" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_53" id="state_C_53" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_53" id="state_OO_53" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ТУРИН 06</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_54" id="gridRadios1_54" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_54" id="gridRadios2_54" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_54" id="gridRadios3_54" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_54" id="gridRadios4_54" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_54" id="state_O_54" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_54" id="state_P_54" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_54" id="state_C_54" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_54" id="state_OO_54" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ТЮБИНГ</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_55" id="gridRadios1_55" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_55" id="gridRadios2_55" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_55" id="gridRadios3_55" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_55" id="gridRadios4_55" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_55" id="state_O_55" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_55" id="state_P_55" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_55" id="state_C_55" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_55" id="state_OO_55" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">УЧЕБНЫЙ СКЛОН</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_56" id="gridRadios1_56" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_56" id="gridRadios2_56" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_56" id="gridRadios3_56" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_56" id="gridRadios4_56" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_56" id="state_O_56" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_56" id="state_P_56" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_56" id="state_C_56" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_56" id="state_OO_56" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ФИАЛКА</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_57" id="gridRadios1_57" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_57" id="gridRadios2_57" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_57" id="gridRadios3_57" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_57" id="gridRadios4_57" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_57" id="state_O_57" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_57" id="state_P_57" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_57" id="state_C_57" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_57" id="state_OO_57" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ШАЛЕ</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_58" id="gridRadios1_58" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_58" id="gridRadios2_58" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_58" id="gridRadios3_58" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_58" id="gridRadios4_58" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_58" id="state_O_58" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_58" id="state_P_58" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_58" id="state_C_58" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_58" id="state_OO_58" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ШАМОНИ 24</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_59" id="gridRadios1_59" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_59" id="gridRadios2_59" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_59" id="gridRadios3_59" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_59" id="gridRadios4_59" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_59" id="state_O_59" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_59" id="state_P_59" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_59" id="state_C_59" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_59" id="state_OO_59" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЭХО</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_60" id="gridRadios1_60" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_60" id="gridRadios2_60" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_60" id="gridRadios3_60" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_60" id="gridRadios4_60" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_60" id="state_O_60" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_60" id="state_P_60" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_60" id="state_C_60" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_60" id="state_OO_60" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЮВЕНТА</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_61" id="gridRadios1_61" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_61" id="gridRadios2_61" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_61" id="gridRadios3_61" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_61" id="gridRadios4_61" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_61" id="state_O_61" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_61" id="state_P_61" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_61" id="state_C_61" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_61" id="state_OO_61" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЮРЬЕВ ХУТОР</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_62" id="gridRadios1_62" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_62" id="gridRadios2_62" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_62" id="gridRadios3_62" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_62" id="gridRadios4_62" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_62" id="state_O_62" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_62" id="state_P_62" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_62" id="state_C_62" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_62" id="state_OO_62" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЯВОР 2</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_63" id="gridRadios1_63" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_63" id="gridRadios2_63" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_63" id="gridRadios3_63" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_63" id="gridRadios4_63" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_63" id="state_O_63" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_63" id="state_P_63" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_63" id="state_C_63" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_63" id="state_OO_63" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЯВОР ВЫШЕ 2220</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_64" id="gridRadios1_64" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_64" id="gridRadios2_64" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_64" id="gridRadios3_64" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_64" id="gridRadios4_64" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_64" id="state_O_64" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_64" id="state_P_64" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_64" id="state_C_64" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_64" id="state_OO_64" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЯВОР МЕЖДУ 2120 И 2220</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_65" id="gridRadios1_65" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_65" id="gridRadios2_65" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_65" id="gridRadios3_65" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_65" id="gridRadios4_65" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_65" id="state_O_65" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_65" id="state_P_65" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_65" id="state_C_65" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_65" id="state_OO_65" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+                    <tr>
+                    <th scope="row">ЯВОР НИЖЕ 2120</th>
+                        <td>
+                            <input class="form-check-input green" type="radio" name="gridRadios_66" id="gridRadios1_66" value="option1" checked>
+                            <input class="form-check-input blue" type="radio" name="gridRadios_66" id="gridRadios2_66" value="option2">
+                            <input class="form-check-input red" type="radio" name="gridRadios_66" id="gridRadios3_66" value="option3">
+                            <input class="form-check-input black" type="radio" name="gridRadios_66" id="gridRadios4_66" value="option4">
+                        </td>
+                        <td>
+                            <input class="form-time id="time"" type="time">
+                             — 
+                            <input class="form-time id="time"" type="time">
+                        </td>
+                        <td>
+                            <input class="form-check-input lime" type="radio" name="state_66" id="state_O_66" value="option1" checked>
+                            <input class="form-check-input yellow" type="radio" name="state_66" id="state_P_66" value="option2">
+                            <input class="form-check-input red" type="radio" name="state_66" id="state_C_66" value="option3">
+                            <input class="form-check-input gray" type="radio" name="state_66" id="state_OO_66" value="option4">
+                        </td>
+                        <td>
+                            <span>12/09/2020 13:45</span>
+                        </td>
+                     </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <!-- <nav class="nav navbar-light bg-light">
+        <div class="nav__container container">
+            <div class="nav__bar flex">
+                <div class="nav__logo">
+                    <a href="#" class="nav__link">
+                        <img src="../static/img/logo.png" class="logo" alt="logo">
+                    </a>
+                </div>
+                <ul class="nav__items flex">
+                    <li class="nav__item flex"><a href="" class="nav__link" id="focusmeplease">Погода</a></li>
+                    <li class="nav__item flex"><a href="" class="nav__link">Подъёмники</a></li>
+                    <li class="nav__item flex"><a href="" class="nav__link">Трассы</a></li>
+                    <li class="nav__item flex"><a href="" class="nav__link">Активности</a></li>
+                    <li class="nav__item flex"><a href="" class="nav__link">Пользователи</a></li>
+                    <li class="nav__item flex"><a href="" class="nav__link">Выйти</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <!-- <script type="text/javascript" > </script> -->
+</body>
+</html>
