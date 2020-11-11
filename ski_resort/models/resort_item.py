@@ -5,11 +5,18 @@ from db import db
 class ResortItem(db.Model):
     __abstract__ = True
 
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80))
-    updated = db.Time(db.TIME())
+    id = db.Column(
+        db.Integer,
+        primary_key=True
+    )
+    name = db.Column(
+        db.String(80)
+    )
+    updated = db.Time(
+        db.TIME
+    )
 
-    def __init__(self, name: str):
+    def __init__(self, name):
         self.name = name
         self.updated = datetime.today()
 

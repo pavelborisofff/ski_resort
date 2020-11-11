@@ -19,9 +19,9 @@ def create_app(config_class=Config):
     with app.app_context():
         db.create_all()
 
-    jwt = JWT(app, authenticate, identity)
+    # jwt = JWT(app, authenticate, identity)
 
-    # api.add_resource(ActModel, '/act')
+    api.add_resource(ActModel, '/act')
     # api.add_resource(LiftModel, '/lift')
     # api.add_resource(SlopeModel, '/slope')
 
